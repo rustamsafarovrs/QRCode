@@ -19,7 +19,7 @@ public class AuthController {
         return ResponseEntity.ok(new MessageResponse(200, "OK"));
     }
 
-    @PostMapping("checkSms")
+    @PostMapping("/checkSms")
     public ResponseEntity<?> checkSms(@Valid @RequestBody CheckSmsRequest request) {
         if (request.getPhone().equals("908883344") && request.getOtp().equals("1234")) {
             return ResponseEntity.ok(new MessageResponse(200, "OK"));
